@@ -134,7 +134,8 @@ app.post('/restaurants', (req, res) => {
     cuisine: req.body.cuisine,
     rating: req.body.rating,
     hours:req.body.hours,
-    menu: req.body.menu
+    menu: req.body.menu,
+    image: req.body.image,
   };
 
   restaurants.push(newRestaurant);
