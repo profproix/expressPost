@@ -21,22 +21,6 @@ app.get("/restaurants/:id", (req, res) => {
   }
 });
 
-app.post("/restaurants", (req, res) => {
-  const newRestaurant = {
-    id: restaurants.length + 1,
-    name: req.body.name,
-    address: req.body.address,
-    phone: req.body.phone,
-    cuisine: req.body.cuisine,
-    rating: req.body.rating,
-    hours: req.body.hours,
-    menu: req.body.menu,
-  };
-
-  restaurants.push(newRestaurant);
-  res.status(201).json(newRestaurant);
-});
-
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
